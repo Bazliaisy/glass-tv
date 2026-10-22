@@ -98,10 +98,23 @@ Android TV or Google TV 8 or newer, so nothing stands in the way, but no one has
 | Device | System | Notes |
 |---|---|---|
 | Google TV Streamer, Xiaomi TV Stick 4K, onn. and other Google TV sticks and boxes | Google TV 10+ | Google's setup app can take Home after the install; the install script handles it |
-| unifi Plus Box (TM, Malaysia; Skyworth HP40A3) | Android TV 9 | TM may lock developer options; keep TM's unifi TV apps or live channels stop |
+| unifi Plus Box (TM, Malaysia; Skyworth HP40A3) | Android TV 9 | TM may lock developer options (one owner reported a password prompt); keep TM's unifi TV apps or live channels stop |
 | Other Sony, TCL, Philips, Hisense (Android models), Sharp, Toshiba (Android models) TVs | Android TV / Google TV 8+ | Use the nearest example list as a starting point, never as is |
 
-## 5. Not supported
+## 5. Reported by people, not checked yet
+
+From replies to the launch post (October 2026). One report each, no model details or logs yet, so treat them
+as hints, not tests. Open an issue with the About screen to move a device up.
+
+| Device | Reported |
+|---|---|
+| SVICloud 3 Pro box | Glass TV runs |
+| Sharp AQUOS Android TV (incl. 4TC55FJ1X) | Glass TV runs; extra steps needed, AI-guided |
+| TCL Android / Google TV (model not given) | Glass TV runs |
+| Xiaomi Mi TV Stick | Glass TV runs |
+| LongTV box (LOVIE), Android 7.0 | Below Android 8: debloat only. Its About screen has no Build row |
+
+## 6. Not supported
 
 | Runs | Why | Instead |
 |---|---|---|

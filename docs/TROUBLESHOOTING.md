@@ -3,6 +3,27 @@
 Things that bit us or contributors, so they don't bite you. Commands use `tools/tv.py`; see the
 [README](../README.md#doing-it-by-hand) for setting it up.
 
+## Before you start
+
+Questions people asked most after the launch, in their own setups:
+
+- **"Claude / ChatGPT / Gemini doesn't understand" or "can't connect to my TV".** The chat apps and websites run
+  in the cloud and can't reach a TV on your home Wi-Fi. Use an agent that runs commands on a computer on the
+  same Wi-Fi: Claude Code, Codex, Google Antigravity (free) or Gemini CLI (free). Free tiers have usage limits;
+  if one stops part-way, continue later or switch to another.
+- **No computer.** An iPhone or iPad can't do it (no shell, and the AI apps run in the cloud). On an Android
+  phone or tablet, Termux (from F-Droid) with an assistant reading out the commands has worked for one
+  person, slowly.
+- **No "Build" on the About screen.** Read the Android version row on the same screen first. Below Android 8 the
+  home screen can't run (debloat only). On 8 or newer, look up "<model> developer options": some boxes put it
+  under Device Preferences → About, some under another name.
+- **Developer options ask for a password**, reported on a unifi Plus Box: the provider has locked them. Use
+  another box.
+- **Text has a dark outline after the install**, seen on a Sharp TV: that is Android's High contrast text
+  (Settings → Accessibility), not Glass TV. Switch it off if you don't need it.
+- **Undoing it, or a factory reset.** Run `tools/restore.sh <your debloat list>` (Windows: `tools\restore.ps1`)
+  first; it brings back everything that was switched off, including the setup wizard a factory reset needs.
+
 ## Connecting
 
 - **macOS: `adb connect` says "No route to host"** although the port is open. Recent macOS treats

@@ -1,8 +1,9 @@
 # The prompt
 
-Paste this into Claude Code (or another coding assistant with shell access) on a computer that is
-on the same Wi-Fi as the TV. Works on Android TV / Google TV sets (Xiaomi, TCL, Hisense, Sony,
-OnePlus, Realme, Nvidia Shield and most others). It will not work on Samsung Tizen, LG webOS or
+Paste this into Claude Code (or another coding assistant with shell access: Codex, Google Antigravity,
+Gemini CLI…) on a computer that is on the same Wi-Fi as the TV. A chat app or website can't reach your TV:
+the assistant has to run commands on that computer. Works on Android TV / Google TV sets (Xiaomi, TCL,
+Hisense, Sony, OnePlus, Realme, Nvidia Shield and most others). It will not work on Samsung Tizen, LG webOS or
 Fire TV. If you cloned this repo, mention that: the assistant can reuse `tools/` and `launcher/`
 instead of writing them from scratch, and only needs to edit `launcher/.../values/config.xml`.
 
@@ -22,6 +23,8 @@ Check the model first
   or newer? If it runs Samsung Tizen, LG webOS, Hisense VIDAA, Roku, Vizio, Fire OS or anything else that
   isn't Android TV, tell me first, plainly, that the launcher can't be installed on it (Fire TV: debloat
   only), suggest a Google TV stick in its HDMI port instead, and stop until I decide.
+- Ask me for a photo of Settings → About and read the Android version before you download or build anything.
+  Below Android 8, tell me then, not at the end.
 - Look up where developer settings are on my exact model before telling me what to press.
 
 Connect

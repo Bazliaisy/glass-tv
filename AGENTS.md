@@ -18,6 +18,17 @@ check it **before** connecting, asking for an IP address, downloading tools or t
    all of it." Then stop, unless they choose the box or the partial option.
 3. If you don't know whether the model runs Android TV, find out first (the About screen, the maker's spec
    page). Never start a setup "to see if it works".
+4. **Read the Android version before any download or build.** Ask for a photo of Settings → About, or connect
+   and run `tools/tv.py --probe` (step 1). Below Android 8 (API 26), say so before installing the JDK or SDK or
+   building anything: the Glass TV home screen can't run there, only the debloat, or a newer box gives them all
+   of it. Cheap Android boxes are often Android 7, and people have gone through the whole setup before finding
+   out.
+5. **Check what the person is running you on.** The setup needs an agent that runs commands on a computer on
+   the same Wi-Fi as the TV. A chat app or website (ChatGPT, Claude or Gemini chat) can't reach the TV, so say
+   so and name agents that can: Claude Code, Codex, Google Antigravity (free), Gemini CLI (free). Without a
+   computer: an iPhone or iPad can't do it; on an Android phone or tablet, Termux with a chat assistant reading
+   out the commands has worked for at least one person, slowly. A computer, used once for the install, is
+   still the easy way.
 
 ## Which Glass TV to install
 
@@ -113,6 +124,11 @@ Written so that any model can follow it to the letter:
   options → **USB debugging** on (also "Network/ADB debugging" if shown). No cable is needed; it works over the
   home Wi-Fi. Some TVs show **Wireless debugging** with a pairing code instead; ask the person for the code
   and the `ip:port`, then `adb pair`.
+- Older boxes may have no **Build** row: their About screen lists the Android version, a software version and
+  a model, and developer options sit somewhere else. Read the Android version row first; below 8, stop here
+  (debloat only).
+- Some boxes from internet providers ask for a **password** before Developer options open (reported on a unifi
+  Plus Box). Without that password, stop and suggest another box; never try to get around it.
 - Ask for the TV's IP address (Settings → Network & Internet → the Wi-Fi network).
 - Set up the Python client once (all the scripts use it; no `adb` program is needed):
   `python3 -m venv tools/venv && tools/venv/bin/pip install -r tools/requirements.txt`
@@ -220,9 +236,10 @@ A theme is a folder with `config.json` (and optional `wallpaper.jpg` or `wallpap
   android.intent.action.MAIN`), System UI and the TV service are running, the dock and grid show the apps.
 - Ask the person to try with the real remote: Home button, Inputs → an HDMI device, playing a video, the mic
   button, screen mirroring, and holding OK on an app to move it.
-- Give them: the restore script (re-enables everything and puts the stock launcher back), where the theme
-  folder is, and the choice about debugging: left on, the TV keeps cleaning its own caches (it only accepts
-  connections it has allowed); switched off, that cleaning stops and nothing else changes.
+- Give them: the restore script (re-enables everything and puts the stock launcher back; tell them to run it
+  before any factory reset, so the setup wizard comes back too), where the theme folder is, and the choice
+  about debugging: left on, the TV keeps cleaning its own caches (it only accepts connections it has allowed);
+  switched off, that cleaning stops and nothing else changes.
 - Offer to switch off firmware updates only after explaining the trade-off: updates can bring the bloat back,
   but they also carry security fixes.
 

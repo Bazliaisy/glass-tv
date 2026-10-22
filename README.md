@@ -65,6 +65,21 @@ TV: it first works out which Glass TV your TV can run (the Android launcher, the
 Samsung and Roku), then
 asks before each change, backs up first, never uninstalls, and checks each step with you as it goes.
 
+**Before you start**, check three things; they are where most attempts go wrong:
+
+- **Android 8 or newer.** Settings → About shows the Android version. Older boxes (many cheap ones run Android
+  7) can be debloated, but the Glass TV home screen needs 8. Samsung, LG, VIDAA and Roku TVs aren't Android at
+  all: plug in an Android TV or Google TV box or stick (Mi TV Stick, Chromecast with Google TV).
+- **An AI agent on a computer, not a chat app.** Claude Code, Codex, Google Antigravity (free) or Gemini CLI
+  (free) run the commands on a computer on the same Wi-Fi as the TV. The ChatGPT, Claude or Gemini chat apps
+  can't reach your TV. No computer: an iPhone or iPad can't do it; an Android phone or tablet with Termux has
+  worked for one person so far, slowly.
+- **Developer options and the prompt.** On the TV, Settings → About → press OK on Build seven times (the place
+  differs by model), then turn on USB debugging. When the TV asks "Allow USB debugging?", tick Always allow
+  and press OK. Some providers' boxes ask for a password here; then that box can't be used.
+
+To undo everything later, run the restore script the setup gives you, and run it before any factory reset.
+
 The full step-by-step guide for debloating and installing is in
 [docs/CLEANYOURTV-README.md](docs/CLEANYOURTV-README.md), and [PROMPT.md](PROMPT.md) lets a coding assistant do
 it for you. In short:
