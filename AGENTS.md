@@ -162,6 +162,7 @@ Written so that any model can follow it to the letter:
 
 ### 4. Build the launcher
 
+- There is no prebuilt APK in Releases or anywhere else: always build it here. Never tell the person to download one.
 - Needs JDK 17 and Android SDK platform 34 + build-tools 34.0.0. On a Mac without Homebrew, download
   Temurin 17 and the Android command-line tools, then `sdkmanager --sdk_root=<dir> --licenses` (the person
   must agree to the licence) and `"platforms;android-34" "build-tools;34.0.0"`.

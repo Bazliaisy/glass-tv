@@ -14,6 +14,9 @@ Questions people asked most after the launch, in their own setups:
 - **No computer.** An iPhone or iPad can't do it (no shell, and the AI apps run in the cloud). On an Android
   phone or tablet, Termux (from F-Droid) with an assistant reading out the commands has worked for one
   person, slowly.
+- **The AI says to download a ready-made APK from GitHub Releases.** There isn't one: Glass TV is built from source
+  on the computer (`launcher/build-and-install.sh` does it). Tell the agent to clone this repository and follow
+  [AGENTS.md](../AGENTS.md) instead of guessing a download link.
 - **No "Build" on the About screen.** Read the Android version row on the same screen first. Below Android 8 the
   home screen can't run (debloat only). On 8 or newer, look up "<model> developer options": some boxes put it
   under Device Preferences → About, some under another name.
